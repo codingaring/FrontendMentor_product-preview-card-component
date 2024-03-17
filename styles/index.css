@@ -1,5 +1,147 @@
 @import url("./global.css");
 
+/** layout **/
 body {
   font-size: 1.4rem;
+  background-color: var(--Cream);
+  position: relative;
+}
+
+main {
+  width: 60rem;
+  height: 45rem;
+  border-radius: 1rem;
+  background-color: var(--White);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 25%);
+}
+
+.product-image-container {
+  height: 45rem;
+  width: 100rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.information-container {
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2.7rem;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 11px;
+  text-align: center;
+  color: var(--Aurometal-Saurus);
+}
+
+/** common property **/
+/** fonts **/
+.display {
+  font-family: "Fraunces";
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.2rem;
+}
+
+.over-line {
+  font-family: "Montserrat";
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.5rem;
+}
+
+.body {
+  font-family: "Montserrat";
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.3rem;
+}
+
+/** product-image-container property **/
+.product-img {
+  height: 45rem;
+  object-fit: contain;
+  transition: height 0.5s, object-fit 0.5s, margin-left 0.5s, transform 0.5s;
+}
+
+.product-img:hover {
+  height: 55rem;
+  object-fit: contain;
+  margin-left: -17%;
+}
+
+/** information-container property **/
+.product-level {
+  color: var(--Aurometal-Saurus);
+}
+
+.product-name {
+  color: var(--Gunmetal);
+}
+
+.description.body {
+  color: var(--Aurometal-Saurus);
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.9rem;
+}
+
+.current-price {
+  color: var(--Deep-Aquamarine);
+}
+
+.before-sale {
+  color: var(--Aurometal-Saurus);
+  font-family: "Montserrat";
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.3rem;
+  text-decoration-line: line-through;
+}
+
+/** button style **/
+.addCart-button {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+
+  padding: 1.5rem 6.2rem;
+  border: none;
+  background-color: var(--Deep-Aquamarine);
+  border-radius: 0.8rem;
+
+  color: var(--White);
+  font-family: "Montserrat";
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.addCart-button:hover {
+  background-color: var(--Deep-Aquamarine-hover);
+}
+
+.addCar-icon {
+  background-image: url("/images/icon-cart.svg");
+  width: 1.6rem;
+  height: 1.6rem;
 }
