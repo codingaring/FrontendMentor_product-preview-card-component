@@ -141,16 +141,13 @@ footer {
 .add-to-cart-button {
   width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
   border-radius: 0.6rem;
   background-color: var(--Deep-Aquamarine);
   padding: 1.5rem 6rem;
   color: white;
-
-  @media screen and (max-width: 375px) {
-    padding: 1.5rem 8.5rem;
-  }
 }
 
 .add-to-cart-button:hover {
