@@ -1,1 +1,170 @@
 @import "./global.css";
+
+/**-------common-------**/
+/** fonts **/
+.body {
+  font-family: "Montserrat";
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.3rem;
+}
+
+.display {
+  font-family: "Fraunces";
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.2rem;
+}
+
+.over-line {
+  font-family: "Montserrat";
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.5rem;
+}
+
+.button-text {
+  font-family: "Montserrat";
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/** layout **/
+body {
+  background-color: var(--Cream);
+  font-size: 1.4rem;
+  position: relative;
+}
+
+main {
+  background-color: var(--White);
+  width: 60rem;
+  display: flex;
+  border-radius: 0.8rem;
+  overflow: hidden;
+
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 50%);
+
+  @media screen and (max-width: 375px) {
+    width: 34.3rem;
+    flex-direction: column;
+    transform: translate(-50%, 25%);
+  }
+}
+
+.product-information {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 3.2rem;
+
+  @media screen and (max-width: 375px) {
+    gap: 1.6rem;
+  }
+}
+
+footer {
+  color: var(--White);
+  font-size: 0.8rem;
+}
+
+/** main-image **/
+.main-image-container {
+  width: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
+
+  @media screen and (max-width: 375px) {
+    width: 100%;
+    height: 40%;
+  }
+}
+
+.main-image-desktop {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+
+  @media screen and (max-width: 375px) {
+    display: none;
+  }
+}
+
+.main-image-desktop:hover {
+  transform: scale(1.3);
+}
+
+.main-image-mobile {
+  display: none;
+
+  @media screen and (max-width: 375px) {
+    display: block;
+    width: 100%;
+    transition: transform 0.5s;
+  }
+}
+
+.main-image-mobile:hover {
+  @media screen and (max-width: 375px) {
+    transform: scale(1.3);
+  }
+}
+
+/** product-information **/
+.product-rating,
+.product-description {
+  color: var(--Aurometal-Saurus);
+}
+
+/** price-container **/
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.current-price {
+  color: var(--Deep-Aquamarine);
+}
+
+.before-price {
+  color: var(--Aurometal-Saurus);
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 3.2rem;
+  text-decoration-line: line-through;
+}
+
+/** button **/
+.add-to-cart-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.6rem;
+  background-color: var(--Deep-Aquamarine);
+  padding: 1.5rem 6rem;
+  color: white;
+
+  @media screen and (max-width: 375px) {
+    padding: 1.5rem 8.5rem;
+  }
+}
+
+.add-to-cart-button:hover {
+  background-color: var(--Deep-Aquamarine-hover);
+}
+
+.cart-icon {
+  background-image: url("../images/icon-cart.svg");
+  width: 1.4rem;
+  height: 1.4rem;
+}
